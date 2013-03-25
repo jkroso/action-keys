@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<script src="../dist/keydispatch.js"></script>
+	<style>
+		#car {
+			background: yellow;
+			padding: 10px;
+			position: absolute;
+			top: 100px;
+			left: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="car" tabIndex="1">5</div>
+	<script>
+		var v = 10
+		var k = keydispatch()
+			.on(function left(e){
+				car.style.left = car.offsetLeft - v + 'px'
+			})
+			.on(function right(e){
+				car.style.left = car.offsetLeft + v + 'px'
+			})
+			.on('shift + right', function(){
+				car.style.left = car.offsetLeft + v * 5 + 'px'
+			})
+			.on('shift + left', function(){
+				car.style.left = car.offsetLeft - v * 5 + 'px'
+			})
+			.on('ctrl + alt + super + up', function(){
+				car.style.background = '#bada55'
+			})
+
+		for (var h in k.hooks) {
+			car.addEventListener(h, k.hooks[h], true)
+		}
+
+		car.focus()
+	</script>
+</body>
+</html>

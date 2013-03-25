@@ -1,0 +1,16 @@
+{
+  "name": "keydispatch",
+  "repo": "jkroso/keydispatch",
+  "description": "broad phase key filtering",
+  "version": "0.1.0",
+  "keywords": ["stream","key","dispatch"],
+  "dependencies": {
+
+  },
+  "main": "src/index.js",
+  "scripts": [
+	  "src/index.js"
+  ],
+  "styles":[],
+  "license": "MIT"
+}

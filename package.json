@@ -1,0 +1,32 @@
+{
+  "name": "keydispatch",
+  "version": "0.1.0",
+  "description": "broad phase key filtering",
+  "dependencies": {
+    "keycode": "git://github.com/jkroso/keycode",
+    "action": "git://github.com/jkroso/action"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "bigfile": "*",
+    "sourcegraph": "*"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jkroso/keydispatch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jkroso/keydispatch/issues"
+  },
+  "keywords": [
+    "stream",
+    "key",
+    "dispatch"
+  ],
+  "author": "Jake Rosoman",
+  "license": "MIT"
+}
