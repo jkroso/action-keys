@@ -48,13 +48,13 @@ function dispatch(e, subj){
 }
 
 function on(pin, action){
-	if (typeof pin == 'function') {
+	if (typeof pin != 'string') {
 		action = pin
 		pin = pin.name
 	}
+	if (typeof action == 'function') action = new Action(action)
 	var mods = pin.split(/ *\+ */)
 	pin = mods.pop()
-	if (typeof action == 'function') action = new Action(action)
 	if (mods.length) {
 		action.hasModifiers = true
 		mods.forEach(function(k){
