@@ -7,8 +7,6 @@
     "action": "git://github.com/jkroso/action"
   },
   "devDependencies": {
-    "mocha": "*",
-    "chai": "*",
     "bigfile": "*",
     "sourcegraph": "*"
   },

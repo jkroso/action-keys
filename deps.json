@@ -1,0 +1,7 @@
+{
+  "production": {
+    "keycode": "http://github.com/jkroso/keycode/tarball/0.1.0",
+    "action": "http://github.com/jkroso/action/tarball/0.1.0",
+    "inherit": "http://github.com/component/inherit/tarball/0.0.2"
+  }
+}
