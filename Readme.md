@@ -1,29 +1,40 @@
 
-# keydispatch
+# action-keys
 
-  broad phase key filtering
+  key dispatch for [action](//github.com/jkroso/action)
 
 ## Getting Started
 
-_With component_  
+_With [component](//github.com/component/component), [packin](//github.com/jkroso/packin) or [npm](//github.com/isaacs/npm)_  
 
-	$ component install jkroso/keydispatch
-
-_With npm_  
-
-	$ npm install jkroso/keydispatch --save
+	$ {package mananger} install jkroso/action-keys
 
 then in your app:
 
 ```js
-var keydispatch = require('keydispatch')
+var Dispatcher = require('action-keys')
 ```
 
 ## API
 
-- [keydispatch()](#keydispatch)
+- [action-keys()](#action-keys)
+- [plugin()](#plugin)
 
-### keydispatch()
+### action-keys()
+
+```js
+new Dispatcher()
+	.on('ctrl + r', reload)
+	.on('ctrl + shift + r', clearCache)
+```
+
+### plugin
+
+for use with [presenter](//github.com/jkroso/presenter)
+
+```js
+presenter.use(require('action-keys/plugin'))
+```
 
 ## Running the tests
 
