@@ -1,24 +1,18 @@
 {
-  "name": "keydispatch",
+  "name": "action-keys",
   "version": "0.1.0",
   "description": "broad phase key filtering",
-  "dependencies": {
-    "keycode": "git://github.com/jkroso/keycode",
-    "action": "git://github.com/jkroso/action"
-  },
+  "dependencies": {},
   "devDependencies": {
     "bigfile": "*",
     "sourcegraph": "*"
   },
-  "scripts": {
-    "test": "make test"
-  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jkroso/keydispatch.git"
+    "url": "git://github.com/jkroso/action-keys.git"
   },
   "bugs": {
-    "url": "https://github.com/jkroso/keydispatch/issues"
+    "url": "https://github.com/jkroso/action-keys/issues"
   },
   "keywords": [
     "stream",

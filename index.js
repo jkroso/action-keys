@@ -13,16 +13,36 @@ var modifiers = {
 
 module.exports = Dispatcher
 
+/**
+ * Dispatcher class
+ */
+
 function Dispatcher(){
 	this.pins = {}
 }
 
+/**
+ * inherit from Action
+ */
+
 inherit(Dispatcher, Action)
+
+/**
+ * update modifyer state
+ * @param {Event} e
+ */
 
 Dispatcher.prototype.keyup = function(e){
 	var key = keys[e.which]
 	if (key in modifiers) this[key] = undefined
 }
+
+/**
+ * dispatch an event
+ * 
+ * @param {Event} e
+ * @param {Presenter} subj
+ */
 
 Dispatcher.prototype.keydown = function(e, subj){
 	e.stopPropagation()
@@ -40,6 +60,14 @@ Dispatcher.prototype.keydown = function(e, subj){
 		act.stdin(e, subj)
 	}
 }
+
+/**
+ * hook into the `.then()` so we can register modifyer keys
+ * 
+ * @param {String} pin
+ * @param {Function|Action} action
+ * @return {Action}
+ */
 
 Dispatcher.prototype.then = function(pin, action){
 	if (typeof pin != 'string') action = pin, pin = pin.name

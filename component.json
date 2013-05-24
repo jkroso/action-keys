@@ -1,16 +1,16 @@
 {
-  "name": "keydispatch",
-  "repo": "jkroso/keydispatch",
+  "name": "action-keys",
+  "repo": "jkroso/action-keys",
   "description": "broad phase key filtering",
   "version": "0.1.0",
   "keywords": ["stream","key","dispatch"],
   "dependencies": {
-
+    "jkroso/keycode": "0.1.0",
+    "jkroso/action": "0.1.0",
+    "component/inherit": "0.0.2"
   },
-  "main": "src/index.js",
   "scripts": [
-	  "src/index.js"
+	  "index.js"
   ],
-  "styles":[],
   "license": "MIT"
 }
